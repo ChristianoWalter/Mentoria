@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Test : MonoBehaviour
 {
-    string palavra = "palavra";
-    bool binario = true;
+    public string palavra = "palavra";
+    private bool binario = true;
     int numeroInteiro = 1;
     float numeroQuebrado = 1.5f;
     Vector2 doisVetores;
@@ -15,14 +15,35 @@ public class Test : MonoBehaviour
 
     GameObject objeto;
 
-    // Start is called before the first frame update
-    void Start()
+
+    private void Awake()
     {
         
     }
 
+    // Start is called before the first frame update
+    void Start()
+    {
+        Exemplo1();
+    }
+
+    public void Exemplo1()
+    {
+        Exemplo2();
+    }
+
+    public void Exemplo2()
+    {
+        numeroInteiro = 2 + 2;
+    }
+
     // Update is called once per frame
     void Update()
+    {
+        
+    }
+
+    private void FixedUpdate()
     {
         
     }
