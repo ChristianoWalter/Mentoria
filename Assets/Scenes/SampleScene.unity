@@ -341,7 +341,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -1547771639, guid: 528e1fe2fd16d1340b2d82f6b8a2bbeb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 2}
@@ -386,6 +386,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   onGround: 0
+  anim: {fileID: 1261742910}
 --- !u!95 &1261742910
 Animator:
   serializedVersion: 5
