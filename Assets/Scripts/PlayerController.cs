@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
+
     public Rigidbody2D rb;
     public float moveSpeed;
     public float jumpForce;
@@ -13,7 +15,16 @@ public class PlayerController : MonoBehaviour
     public LayerMask ground;
     public bool onGround;
 
+    public bool canAttack;
+    public bool isAttacking;
+    public bool isHeavyAttack;
+
     public Animator anim;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +51,43 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && onGround)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        }
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            isHeavyAttack = false;
+            Attack();
+        }
+        
+        if (Input.GetButtonDown("Fire2"))
+        {
+            isHeavyAttack = true;
+            Attack();
+        }
+    }
+
+    public void Attack()
+    {
+        if (canAttack)
+        {
+            isAttacking = true;
+            canAttack = false;
+        }
+        else
+        {
+            return;
+        }
+    }
+
+    public void AttackManager()
+    {
+        if (!canAttack)
+        {
+            canAttack = true;
+        }
+        else
+        {
+            canAttack = false;
         }
     }
 }
