@@ -90,6 +90,7 @@ public class BaseEnemyController : HealthController
 
     protected override void Death()
     {
+        Destroy(gameObject);
         Debug.Log("inimigo morreu");
     }
 

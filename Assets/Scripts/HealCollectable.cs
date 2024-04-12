@@ -6,6 +6,7 @@ public class HealCollectable : MonoBehaviour
 {
     public float healthRegen;
     public bool maxHeal;
+    public GameObject collectEffect;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -19,6 +20,12 @@ public class HealCollectable : MonoBehaviour
             {
                 PlayerController.instance.TakeHeal(PlayerController.instance.maxHealth);
             }
+            
+            if (collectEffect != null)
+            {
+                Instantiate(collectEffect, transform.position, Quaternion.identity);
+            }
+
             Destroy(gameObject);
         }
     }

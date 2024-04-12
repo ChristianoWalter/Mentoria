@@ -27,6 +27,8 @@ public class PlayerController : HealthController
     public Transform attackPoint;
     public LayerMask enemyLayers;
 
+    public HealthBarController healthBar;
+
     public Animator anim;
 
     private void Awake()
@@ -34,20 +36,8 @@ public class PlayerController : HealthController
         instance = this;
         canMove = true;
         currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private void FixedUpdate()
     {
         onGround = Physics2D.OverlapCircle(foot.position, .2f, ground);
@@ -174,6 +164,11 @@ public class PlayerController : HealthController
         yield return new WaitForSeconds(.5f);
         canMove = true;
         isInvencible = false;
+    }
+
+    protected override void DamageEffect()
+    {
+        healthBar.SetHealth(currentHealth);
     }
 
     protected override void Death()
