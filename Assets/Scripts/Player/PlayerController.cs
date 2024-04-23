@@ -173,7 +173,8 @@ public class PlayerController : HealthController
 
     protected override void Death()
     {
-        Debug.Log("morreu");
+        GameController.instance.GameOver();
+        Destroy(gameObject);
     }
 
 }
