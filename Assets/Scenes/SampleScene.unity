@@ -224,6 +224,7 @@ GameObject:
   - component: {fileID: 158301212}
   - component: {fileID: 158301211}
   - component: {fileID: 158301215}
+  - component: {fileID: 158301216}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -331,6 +332,18 @@ MonoBehaviour:
   gameOverPanel: {fileID: 1216089141}
   pausePanel: {fileID: 1847631461}
   isPaused: 0
+--- !u!114 &158301216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158301210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ed2fe19f6e4c74fb127e100240fc72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &323172686
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,7 +1009,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 674583012}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 158301216}
+        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
+        m_MethodName: MainMenuScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &674583012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1783,7 +1808,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1535581862}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 158301216}
+        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
+        m_MethodName: MainScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1535581862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2040,7 +2077,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1641283682}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 158301216}
+        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1641283682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2510,7 +2559,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1865990971}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 158301216}
+        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1865990971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2631,7 +2692,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1913051866}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 158301216}
+        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
+        m_MethodName: MainMenuScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1913051866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17465,6 +17538,10 @@ PrefabInstance:
     - target: {fileID: 7004368089258674535, guid: f704292b53a909943a83514b75b97b03, type: 3}
       propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8474575998350489965, guid: f704292b53a909943a83514b75b97b03, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9186068633519926490, guid: f704292b53a909943a83514b75b97b03, type: 3}
       propertyPath: m_Name

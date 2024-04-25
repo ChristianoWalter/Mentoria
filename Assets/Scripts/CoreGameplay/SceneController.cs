@@ -7,6 +7,18 @@ public class SceneController : MonoBehaviour
 {
     public void MainScene()
     {
-        
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene("SampleScene");
+    }
+
+    public void MainMenuScene()
+    {
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
